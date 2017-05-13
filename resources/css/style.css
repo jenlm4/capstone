@@ -1,1 +1,56 @@
 /* Universal Styles */
+html {
+  font-family: 'Varela Round', sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #333333;
+  font-size: 18px;
+}
+
+/* Header styles */
+header {
+  height: 64px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo and name at left */
+
+#logo-name {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+#logo-name img {
+  height: 50px;
+  margin-top: .125rem;
+}
+
+#logo-name span {
+  letter-spacing: 0.05rem;
+}
+
+#colmar {
+  font-weight: bold;
+  color: #4A4A4A;
+}
+
+#academy {
+  color: darkgray;
+}
+
+/* Main nav on right */
+
+#main-nav {
+  display: flex;
+  margin-right: 1.5rem;
+}
+
+nav ul li a {
+  padding-left: 16px;
+  color: #333333;
+  text-decoration: none;
+}
