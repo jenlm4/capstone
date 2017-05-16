@@ -137,8 +137,8 @@ nav ul li a {
   line-height: 1.2;
 }
 
-#highlight caption {
-  font-size: .6rem;
+#highlight p:last-child {
+  font-size: .8rem;
 }
 
 #features {
@@ -159,4 +159,8 @@ nav ul li a {
 
 .feature-text h2, .feature-text p {
   margin-bottom: .444rem; /* 8px */
+}
+
+.feature-text a {
+  color: cornflowerblue;
 }
