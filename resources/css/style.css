@@ -9,6 +9,7 @@ html {
 
 h1 {
   font-size: 2.5rem;
+  font-weight: 900;
 }
 
 h2 {
@@ -17,10 +18,6 @@ h2 {
 
 h3 {
   font-size: 1.333rem;
-}
-
-div {
-  border: 1px solid red;
 }
 
 a {
@@ -75,6 +72,10 @@ nav ul li a {
   color: #4d4d4d;
 }
 
+#mobile-nav {
+  display: none;
+}
+
 /* Banner section */
 
 #banner {
@@ -101,11 +102,7 @@ nav ul li a {
   margin-left: 2.222rem
 }
 
-#banner h1, #highlight h1, #classes h1, #thesis h1 {
-  font-weight:900;
-}
-
-#banner p {
+#banner-text p {
   margin: 18% 0;
   font-size: 1.8rem;
 }
@@ -160,7 +157,7 @@ nav ul li a {
   height: 30%;
 }
 
-#features img {
+.feature img {
   width: 35%;
   height: auto;
   margin: .888rem .888rem;
@@ -172,6 +169,10 @@ nav ul li a {
 
 .feature-text a {
   color: cornflowerblue;
+}
+
+.feature-img-mobile {
+  display: none;
 }
 
 #lecture {
@@ -196,32 +197,40 @@ nav ul li a {
   justify-content: center;
 }
 
-.class {
+.course {
   width: 25%;
   background-color: white;
   margin: 0 1rem 1rem 1rem;
   height: auto;
 }
 
-.class img {
+.course img {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-.class h2, .class h3, .class p {
+.course h2, .course h3, .course p {
   margin-left: 1rem;
 }
 
-.class h3 {
+.course h2 {
+  margin-top: .9rem;
+}
+
+.course h3 {
   font-weight: normal;
 }
 
-.class p {
+.course p {
   margin-bottom: .75rem;
   margin-right: 1rem;
   line-height: 1.4;
   font-size: 1.2rem;
+}
+
+nav#mobile-class-nav {
+  display: none;
 }
 
 /* Thesis section */
@@ -272,7 +281,6 @@ video {
   line-height: 1.2;
 }
 
-
 /* Footer section */
 footer {
   display: flex;
@@ -288,6 +296,128 @@ footer ul {
   margin-right: 1rem;
 }
 
-footer ul li{
+footer ul li {
   display: inline;
+}
+
+/* Media queries */
+@media screen and (max-width: 480px) {
+  header, #banner {
+    display: block;
+  }
+
+  #logo-name, #main-nav, div#highlight, .feature img, div.course, #thesis-detail-container, #video h2, #video p, footer nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.333rem 0;
+  }
+
+  ul#mobile-nav li a img {
+    height: 40px;
+  }
+
+  #banner-img {
+    background-color: #4d4d4d;
+  }
+
+  #banner-img img {
+    visibility: hidden;
+    height: 180px;
+  }
+
+  #banner-img, #banner-text {
+    width: auto;
+  }
+
+  #banner-text {
+    margin: 0 .9rem;
+  }
+
+  #banner-text h1 {
+    line-height: 1.5;
+    margin: 1.777rem 0;
+  }
+
+  #banner-text p {
+    margin: 0 0 1.333rem 0;
+  }
+
+  #banner-text button {
+    height: 2rem;
+    padding: 0;
+    margin-bottom: 1.777rem;
+  }
+
+  section#features, section#classes, section#thesis, footer nav ul {
+    background-color: #F3F5F5;
+  }
+
+  #features {
+    width: 100%;
+  }
+
+  .feature {
+    display: block;
+    margin: .9rem .9rem 0 .9rem;
+    overflow: hidden;
+  }
+
+  #lecture {
+    background-color: #F3F5F5;
+  }
+
+  .feature img {
+    margin: 0;
+  }
+
+  img.feature-img-mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: .9rem;
+  }
+
+  .feature-text {
+    height: 8rem;
+  }
+
+  .feature-text h2 {
+    margin-top: .5rem;
+  }
+
+  .feature-text p {
+    line-height: 1.4;
+  }
+
+  #class-container {
+    display: block;
+  }
+
+  nav#mobile-class-nav {
+    display: block;
+  }
+
+  #mobile-class-nav ul li {
+    padding: .9rem 0 .9rem .9rem;
+    background-color: #ccc;
+    margin: .6rem;
+    width: 91%;
+  }
+
+  #mobile-class-nav ul li a {
+    font-weight: bold;
+  }
+
+  #video {
+    width: 90%;
+  }
+
+  footer {
+    padding: .9rem 0;
+  }
+
 }
